@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 #"WARNING: Executing personal scripts can expose your system to security risks and unintended consequences.
 #ure you thoroughly understand the script’s functionality, trust its source, and have backups of important data before proceeding.
