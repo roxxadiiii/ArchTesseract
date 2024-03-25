@@ -53,11 +53,13 @@ EOF
 echo " >>>>   CLONING UNIREPO FROM GIT"
 git clone https://github.com/roxxamay/UniRepo.git
 echo
+orignal_dir=$(pwd)
 echo ">>>>    CHANGING DIRECTORY TO THE SCRIPT"
 cd UniRepo
 echo
 echo ">>>>    EXECUTING SCRIPT"
 bash installKeyrings.sh
+cd "$orignal_dir"
 echo
 echo
 
@@ -140,7 +142,7 @@ cat <<"EOF"
 
 EOF
 
-sudo pacman -S chrmoium --noconfirm --needed
+sudo pacman -S chromium --noconfirm --needed
 
 cat <<"EOF"
 
@@ -196,7 +198,7 @@ sudo pacman --noconfirm --needed \
 	ttf-dejavu \
 	ttf-fira-mono \
 	ttf-fira-sans \
-	ttf-font-awsome \
+	ttf-font-awesome \
 	ttf-hack \
 	ttf-opensans \
 	ttf-roboto-mono
