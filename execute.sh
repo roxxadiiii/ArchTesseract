@@ -136,13 +136,85 @@ sudo pacman -S github-cli --noconfirm --needed
 
 cat <<"EOF"
 
-░█▀▄░█░░░░█▀▀▄░▄▀▀▄░█▀▄▀█░░▀░░█░▒█░█▀▄▀█
-░█░░░█▀▀█░█▄▄▀░█░░█░█░▀░█░░█▀░█░▒█░█░▀░█
-░▀▀▀░▀░░▀░▀░▀▀░░▀▀░░▀░░▒▀░▀▀▀░░▀▀▀░▀░░▒▀
+░█▀▀▄░█▀▀▄░▄▀▀▄░█░░░█░█▀▀░█▀▀░█▀▀▄
+░█▀▀▄░█▄▄▀░█░░█░▀▄█▄▀░▀▀▄░█▀▀░█▄▄▀
+░▀▀▀▀░▀░▀▀░░▀▀░░░▀░▀░░▀▀▀░▀▀▀░▀░▀▀
 
 EOF
 
-sudo pacman -S chromium --noconfirm --needed
+{
+
+echo "Select the browser you wish to install:"
+echo "1) Firefox"
+echo "2) Chromium"
+echo "3) Brave"
+echo "4) Firedragon"
+echo "5) Vivaldi"
+read -p "Enter the number of your choice: " choice
+
+case $choice in
+  1)
+    cat << "EOF"
+
+    ░█▀▀░░▀░░█▀▀▄░█▀▀░█▀▀░▄▀▀▄░█░█
+    ░█▀░░░█▀░█▄▄▀░█▀▀░█▀░░█░░█░▄▀▄
+    ░▀░░░▀▀▀░▀░▀▀░▀▀▀░▀░░░░▀▀░░▀░▀
+
+
+    EOF
+    sudo pacman -S firefox
+    ;;
+  2)
+    cat << "EOF"
+    
+    ░█▀▄░█░░░░█▀▀▄░▄▀▀▄░█▀▄▀█░░▀░░█░▒█░█▀▄▀█
+    ░█░░░█▀▀█░█▄▄▀░█░░█░█░▀░█░░█▀░█░▒█░█░▀░█
+    ░▀▀▀░▀░░▀░▀░▀▀░░▀▀░░▀░░▒▀░▀▀▀░░▀▀▀░▀░░▒▀
+    
+    EOF
+    sudo pacman -S chromium
+    ;;
+  3)
+    cat << "EOF"
+
+    ░█▀▀▄░█▀▀▄░█▀▀▄░▄░░░▄░█▀▀
+    ░█▀▀▄░█▄▄▀░█▄▄█░░█▄█░░█▀▀
+    ░▀▀▀▀░▀░▀▀░▀░░▀░░░▀░░░▀▀▀
+
+    EOF
+    sudo pacman -S chaotic-aur/brave-bin
+    ;;
+  4)
+    cat << "EOF"
+
+    ░█▀▀░░▀░░█▀▀▄░█▀▀░█▀▄░█▀▀▄░█▀▀▄░█▀▀▀░▄▀▀▄░█▀▀▄
+    ░█▀░░░█▀░█▄▄▀░█▀▀░█░█░█▄▄▀░█▄▄█░█░▀▄░█░░█░█░▒█
+    ░▀░░░▀▀▀░▀░▀▀░▀▀▀░▀▀░░▀░▀▀░▀░░▀░▀▀▀▀░░▀▀░░▀░░▀
+
+    EOF
+    sudo pacman -S chaotic-aur/firedragon
+    ;;
+  5)
+    cat << "EOF"
+
+    ░▄░░░▄░░▀░░▄░░░▄░█▀▀▄░█░░█▀▄░░▀░
+    ░░█▄█░░░█▀░░█▄█░░█▄▄█░█░░█░█░░█▀
+    ░░░▀░░░▀▀▀░░░▀░░░▀░░▀░▀▀░▀▀░░▀▀▀
+
+
+    EOF
+    yay -S vivaldi
+    ;;
+  *)
+    echo "Invalid choice. Exiting."
+    exit 1
+    ;;
+esac
+
+echo "Installation complete."
+
+}
+
 
 cat <<"EOF"
 
