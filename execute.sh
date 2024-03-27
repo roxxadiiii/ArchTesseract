@@ -217,7 +217,9 @@ if pacman -Qi thunar &>/dev/null; then
 	sudo pacman -S --noconfirm --needed \
 		thunar-archive-plugin \
 		thunar-volman \
-		xarchiver
+		xarchiver \
+		gvfs
+
 else
 	echo "Thunar is not installed in system"
 fi
@@ -254,7 +256,7 @@ EOF
 echo " >>>>>   LIST OF AVAILABLE SHELLS IN SYSTEM"
 chsh -l
 sleep 3
-chsh -s /bin/fish
+chsh -s /bin/fish root
 echo ">>>>> logout to take effect"
 
 cat <<"EOF"
