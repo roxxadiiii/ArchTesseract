@@ -386,3 +386,29 @@ sudo pacman --noconfirm --needed -S auto-cpufreq
 echo ">>>>> Installing auto-cpufreq in system"
 sleep 3
 sudo auto-cpufreq --install
+
+cat << "EOF"
+
+░█▀▀▄░█▀▀░█▀▀▄░▄▀▀▄░▄▀▀▄░▀█▀
+░█▄▄▀░█▀▀░█▀▀▄░█░░█░█░░█░░█░
+░▀░▀▀░▀▀▀░▀▀▀▀░░▀▀░░░▀▀░░░▀░
+
+EOF
+echo
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+echo
+echo "WARNING: The system will reboot in 30 seconds. Press any key to cancel."
+countdown=30
+while [ $countdown -gt 0 ]; do
+  echo -ne "Rebooting in $countdown seconds...\033[0K\r"
+  sleep 1
+  : $((countdown--))
+  # Check if a key has been pressed
+  if read -s -n 1 -t 1 key; then
+    echo "Reboot canceled."
+    exit 0
+  fi
+done
+
+echo "Rebooting now..."
+sudo reboot
