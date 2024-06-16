@@ -58,7 +58,17 @@ cat <<"EOF"
 
 EOF
 
-sudo pacman -S  gvfs gvfs-afc gvfs-mtp gvfs-nfs gvfs-smb --noconfirm --needed
+sudo pacman -S gvfs gvfs-afc gvfs-mtp gvfs-nfs gvfs-smb --noconfirm --needed
+
+cat <<"EOF"
+
+░█▀▀▄░█▀▀░▀█▀░█░░░█░▄▀▀▄░█▀▀▄░█░▄░░░░█▀▄▀█░█▀▀▄░█▀▀▄░█▀▀▄░█▀▀▀░█▀▀░█▀▀▄░░░░█▀▀▄░▄▀▀▄░▄▀▀▄░█░░█▀▀░▀█▀
+░█░▒█░█▀▀░░█░░▀▄█▄▀░█░░█░█▄▄▀░█▀▄░▀▀░█░▀░█░█▄▄█░█░▒█░█▄▄█░█░▀▄░█▀▀░█▄▄▀░▀▀░█▄▄█░█▄▄█░█▄▄█░█░░█▀▀░░█░
+░▀░░▀░▀▀▀░░▀░░░▀░▀░░░▀▀░░▀░▀▀░▀░▀░░░░▀░░▒▀░▀░░▀░▀░░▀░▀░░▀░▀▀▀▀░▀▀▀░▀░▀▀░░░░▀░░▀░█░░░░█░░░░▀▀░▀▀▀░░▀░
+
+EOF
+
+sudo pacman -S network-manager-applet --noconfirm --needed
 
 cat <<"EOF"
 
