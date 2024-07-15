@@ -5,7 +5,6 @@
 
 ```
 
-Let's revisit the `1-install-git.sh` script and provide a detailed explanation for each section to ensure a thorough understanding of its functionality and purpose.
 
 ### Script Overview
 
